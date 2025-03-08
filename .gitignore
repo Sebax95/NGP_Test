@@ -59,3 +59,6 @@ Desktop.ini
 
 # Ignore JetBrains Plugin logs
 .idea/workspace.xml
+
+Assembly-CSharp.csproj
+NGP Test.sln
