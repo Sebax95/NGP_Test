@@ -48,6 +48,10 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.25f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\IPickeable.cs" />
+    <Compile Include="Assets\Scripts\Inventory.cs" />
+    <Compile Include="Assets\Scripts\PickableObject.cs" />
+    <Compile Include="Assets\Scripts\Item.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.25f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -740,7 +744,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Assets\Scripts\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
