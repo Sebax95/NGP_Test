@@ -1,0 +1,61 @@
+﻿# Unity-generated files
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+
+# Visual Studio / MonoDevelop generated files
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.csproj.user
+*.pidb
+*.user
+*.booproj
+*.svd
+
+# Rider generated files
+.idea/
+*.sln.iml
+
+# Auto-generated files by Unity
+[Dd]ebug/
+[Cc]rashReports/
+.vscode/
+*.apk
+*.cd/
+*.diff
+*.patch
+
+# Mac-specific files
+.DS_Store
+
+# Windows-specific files
+[Tt]humbs.db
+Desktop.ini
+
+# Temporary files created during the build process
+*.stackdump
+
+# User-specific folders and files
+*.swp
+*.tmp
+*.temp
+*.tps
+*.log
+*.cache
+*.tc
+
+# Builds caches
+.gradle/
+.idea/
+
+# Unity meta files
+/[Aa]ssets/**/*.meta
+
+# Ignore JetBrains Plugin logs
+.idea/workspace.xml
