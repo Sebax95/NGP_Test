@@ -2,5 +2,5 @@ using UnityEngine;
 
 public interface IController
 {
-    Vector3 Move();
+    void CheckInputs();
 }
