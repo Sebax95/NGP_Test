@@ -10,24 +10,33 @@ public class Inventory
 
     public Inventory(int _max, int currentSize)
     {
-        items = new List<Item>();
         maxSize = _max;
         this.currentSize = currentSize;
+
+        items = new List<Item>(maxSize);
+        for (int i = 0; i < maxSize; i++)
+            items.Add(null); 
     }
-    
+
     public void AddItem(Item item)
     {
-        if (item == null) 
-            return; 
+        if (item == null)
+            return;
+
         if (currentSize >= maxSize)
             return;
-        Item existingItem = items.Find(i => i.id == item.id);
+        
+        Item existingItem = items.Find(i => i != null && i.id == item.id);
         if (existingItem != null)
             existingItem.quantity += item.quantity;
         else
         {
-            items.Add(item);
-            currentSize++;
+            int nullIndex = items.IndexOf(null);
+            if (nullIndex != -1)
+            {
+                items[nullIndex] = item;
+                currentSize++;
+            }
         }
     }
     

@@ -16,7 +16,7 @@ public class InventoryController : MonoBehaviour
     [SerializeField] 
     private ItemDescription _itemDescription;
     [SerializeField]
-    private SlotIcon slotPrefab;
+    private GameObject slotPrefab;
     private const int MAX_SLOTS = 60;
     [SerializeField]
     private Transform slotsContainer;
@@ -50,18 +50,22 @@ public class InventoryController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         
     }
+
     private void FillEmptySlots()
     {
         slots = new List<SlotIcon>();
         for (int i = 0; i < MAX_SLOTS; i++)
         {
-            var slot = Instantiate(slotPrefab, slotsContainer);
+            var obj = Instantiate(slotPrefab, slotsContainer);
+            var slot = obj.GetComponentInChildren<SlotIcon>();
             slot.SetInventoryView(this);
             slot.SetIndex(i);
             slot.EmptySlot();
+            slot.SetItem(null);
             slots.Add(slot);
         }
     }
+
 
     public void SelectItem(SlotIcon slot)
     {
@@ -71,23 +75,40 @@ public class InventoryController : MonoBehaviour
         _view.AnimationDescription(()=>_itemDescription.SetItem(_selectedSlot.item));
         
     }
-    public void SetInventory(Inventory newInventory)
+    public Inventory SetInventory(Inventory newInventory)
     {
         _inventory = newInventory;
         UpdateInventory();
+        return _inventory;
     }
     
     private void UpdateInventory()
     {
         if (_inventory == null || slots == null) return;
-        
+
         foreach (var slot in slots)
             slot.EmptySlot();
-        
-        
+
         for (int i = 0; i < _inventory.items.Count; i++)
             if (i < MAX_SLOTS)
                 slots[i].SetItem(_inventory.items[i]);
+    }
+
+    public void SwapItems(SlotIcon slotA, SlotIcon slotB)
+    {
+        if (slotA == null || slotB == null)
+            return;
+
+        int indexA = slotA.GetIndex();
+        int indexB = slotB.GetIndex();
+        
+        if (indexA < 0 || indexB < 0 || indexA >= _inventory.items.Count || indexB >= _inventory.items.Count)
+            return;
+
+        (_inventory.items[indexA], _inventory.items[indexB]) = (_inventory.items[indexB], _inventory.items[indexA]);
+
+        slotA.SetItem(_inventory.items[indexA]);
+        slotB.SetItem(_inventory.items[indexB]);
     }
 
 }
