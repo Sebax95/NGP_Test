@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Cinemachine;
 using DG.Tweening;
 using UnityEngine;
 
@@ -11,6 +12,8 @@ public class Player: BaseMonoBehaviour
     [SerializeField] 
     private float _speed;
     private Camera _camera;
+    [SerializeField]
+    private CinemachineFreeLook _cameraVirtual;
     private IController _controller;
     private PlayerView _playerView;
     private Rigidbody _rigidbody;
@@ -28,15 +31,26 @@ public class Player: BaseMonoBehaviour
         _inventory = new Inventory(10, 0);
         _isPicking = false;
         canMove = true;
+        UpdateManager.OnPause += () => CameraPause(true);
+        UpdateManager.OnUnPause += () => CameraPause(false);
     }
 
-    public override void OnUpdate() { }
+    private void CameraPause(bool isPaused)
+    {
+        _cameraVirtual.enabled = !isPaused;
+    }
+    public override void OnUpdate()
+    {
+        if(!canMove)
+            return;
+        _controller.CheckInputs();
+    }
 
     public override void OnFixedUpdate()
     {
         if(!canMove)
             return;
-        _controller.CheckInputs();
+        _controller.CheckMovementInputs();
     }
 
     public override void OnLateUpdate() => CameraForward();
@@ -88,10 +102,13 @@ public class Player: BaseMonoBehaviour
                 pickableObject.Pick(_inventory);
                 _playerView.PickUp();
                 StartCoroutine(WaitToPickUp());
+                InventoryController.Instance.SetInventory(_inventory);
                 break;
             }
         }
     }
+
+    public void OpenInventory() => InventoryController.Instance.Open();
 
     private IEnumerator WaitToPickUp()
     {
