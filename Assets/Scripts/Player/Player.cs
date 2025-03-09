@@ -28,7 +28,7 @@ public class Player: BaseMonoBehaviour
         _playerView = GetComponent<PlayerView>();
         _camera = Camera.main;
         Cursor.lockState = CursorLockMode.Locked;
-        _inventory = new Inventory(10, 0);
+        _inventory = new Inventory(60, 0);
         _isPicking = false;
         canMove = true;
         UpdateManager.OnPause += () => CameraPause(true);
@@ -102,7 +102,7 @@ public class Player: BaseMonoBehaviour
                 pickableObject.Pick(_inventory);
                 _playerView.PickUp();
                 StartCoroutine(WaitToPickUp());
-                InventoryController.Instance.SetInventory(_inventory);
+                _inventory = InventoryController.Instance.SetInventory(_inventory);
                 break;
             }
         }
