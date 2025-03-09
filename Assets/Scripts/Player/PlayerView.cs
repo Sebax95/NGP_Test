@@ -8,6 +8,6 @@ public class PlayerView: BaseMonoBehaviour
     
     public void Rotation(float value) => _animator.SetFloat("RotationValue", value);
     
-    public void PickUp(bool value) => _animator.SetBool("PickUp", value);
+    public void PickUp() => _animator.SetTrigger("PickUp");
     
 }

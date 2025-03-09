@@ -7,11 +7,14 @@ public class PlayerController: IController
     {
         _player = playerModel;
     }
-    
 
-    public Vector3 Move()
+
+    public void CheckInputs()
     {
-        Vector3 direction = new Vector3(Input.GetAxisRaw("Horizontal") /2, 0, Input.GetAxisRaw("Vertical"));
-        return direction.normalized;
+        Vector3 direction = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
+        _player.MovePlayer(direction.normalized);
+
+        if (Input.GetKeyDown(KeyCode.E))
+            _player.PickUpItem();
     }
 }
