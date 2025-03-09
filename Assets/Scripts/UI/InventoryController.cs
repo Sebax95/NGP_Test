@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class InventoryController : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class InventoryController : MonoBehaviour
     private Transform inventoryContainer;
 
     [SerializeField] 
-    private ItemDescription ItemDescription;
+    private ItemDescription _itemDescription;
     [SerializeField]
     private SlotIcon slotPrefab;
     private const int MAX_SLOTS = 60;
@@ -32,19 +33,22 @@ public class InventoryController : MonoBehaviour
             Destroy(gameObject);
     }
 
-    private void Start() => FillEmptySlots();
+    private void Start()
+    {
+        FillEmptySlots();
+        _view = GetComponent<InventoryView>();
+    }
 
     public void Open()
     {
-        inventoryContainer.gameObject.SetActive(true);
+        _view.OpenInventory(UpdateManager.TogglePause);
         Cursor.lockState = CursorLockMode.None;
-        UpdateManager.TogglePause();
     }
     public void Close()
     {
-        inventoryContainer.gameObject.SetActive(false);
+        _view.CloseInventory(UpdateManager.TogglePause);
         Cursor.lockState = CursorLockMode.Locked;
-        UpdateManager.TogglePause();
+        
     }
     private void FillEmptySlots()
     {
@@ -62,9 +66,10 @@ public class InventoryController : MonoBehaviour
     public void SelectItem(SlotIcon slot)
     {
         _selectedSlot = slot;
-        if(!ItemDescription.gameObject.activeSelf)
-            ItemDescription.gameObject.SetActive(true);
-        ItemDescription.SetItem(_selectedSlot.item);
+        if(!_itemDescription.gameObject.activeSelf)
+            _itemDescription.gameObject.SetActive(true);
+        _view.AnimationDescription(()=>_itemDescription.SetItem(_selectedSlot.item));
+        
     }
     public void SetInventory(Inventory newInventory)
     {
