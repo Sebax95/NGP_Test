@@ -24,9 +24,10 @@ public class SlotIcon : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, 
         canvasGroup = GetComponent<CanvasGroup>();
         if (canvasGroup == null)
             canvasGroup = gameObject.AddComponent<CanvasGroup>();
+        item = new Item();
     }
 
-    public void SetInventoryView(InventoryController inventoryController) => _inventoryController = inventoryController;
+    public void SetInventoryController(InventoryController inventoryController) => _inventoryController = inventoryController;
 
     public void SetIndex(int id)
     {
@@ -50,7 +51,7 @@ public class SlotIcon : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, 
 
     public void SetSprite()
     {
-        if (item != null)
+        if (item.type != ItemType.Empty)
         {
             imageIcon.sprite = item.sprite;
             imageIcon.color = Color.white;
@@ -60,8 +61,8 @@ public class SlotIcon : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, 
     }
 
     public void SetQuantity()
-    {
-        if (item != null && item.quantity > 0)
+    { 
+        if (item.type != ItemType.Empty && item.quantity > 1)
         {
             frameQuantity.SetActive(true);
             textQuantity.text = item.quantity.ToString();
@@ -84,14 +85,20 @@ public class SlotIcon : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, 
     
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (item == null)
+        if(item == null)
             return;
+        if(item.type == ItemType.Empty)
+            return;
+        
         _inventoryController.SelectItem(this);
     }
     
     public void OnBeginDrag(PointerEventData eventData)
     {
-        if (item == null) return;
+        if (item == null)
+            return;
+        if (item.type == ItemType.Empty)
+            return;
 
         originalParent = transform.parent;
 
@@ -105,6 +112,8 @@ public class SlotIcon : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, 
     public void OnDrag(PointerEventData eventData)
     {
         if (item == null)
+            return;
+        if (item.type == ItemType.Empty)
             return;
 
         transform.position = eventData.position;

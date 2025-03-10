@@ -19,7 +19,6 @@ public class Item
         this.quantity = quantity;
         this.type = type;
         this.sprite = sprite;
-        //this.sprite = Resources.Load<Sprite>($"Sprites/Item/{type}/{sprite}");
     }
 
     public Item(Item item)
@@ -30,13 +29,23 @@ public class Item
         quantity = item.quantity;
         type = item.type;
         sprite = item.sprite;
-        //sprite = Resources.Load<Sprite>($"Sprites/Item/{item.type}/{item.sprite}");
+    }
+
+    public Item()
+    {
+        type = ItemType.Empty;
+        sprite = null;
+        name = "";
+        description = "";
+        quantity = 0;
+        id = -1;
     }
 }
 public enum ItemType
 {
+    Empty,
     Weapon,
     Consumable,
     Quest,
-    Misc
+    Misc,
 }

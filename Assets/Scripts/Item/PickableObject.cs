@@ -34,9 +34,9 @@ public class PickableObject: BaseMonoBehaviour, IPickeable
     }
     
 
-    public void Pick(Inventory inv)
+    public void Pick()
     {
-        inv.AddItem(Item);
+        InventoryController.Instance.AddItemToInventory(Item);
         Destroy(gameObject);
     }
 

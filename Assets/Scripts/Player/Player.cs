@@ -6,9 +6,6 @@ using UnityEngine;
 
 public class Player: BaseMonoBehaviour
 {
-    [SerializeField]
-    private Inventory _inventory;
-
     [SerializeField] 
     private float _speed;
     private Camera _camera;
@@ -28,7 +25,6 @@ public class Player: BaseMonoBehaviour
         _playerView = GetComponent<PlayerView>();
         _camera = Camera.main;
         Cursor.lockState = CursorLockMode.Locked;
-        _inventory = new Inventory(60, 0);
         _isPicking = false;
         canMove = true;
         UpdateManager.OnPause += () => CameraPause(true);
@@ -89,8 +85,9 @@ public class Player: BaseMonoBehaviour
 
     public void PickUpItem()
     {
-        if(_isPicking) 
+        if (_isPicking)
             return;
+
         RaycastHit[] hits = Physics.SphereCastAll(transform.position, .5f, -Vector3.up);
 
         foreach (var hit in hits)
@@ -99,10 +96,11 @@ public class Player: BaseMonoBehaviour
             {
                 _isPicking = true;
                 canMove = false;
-                pickableObject.Pick(_inventory);
-                _playerView.PickUp();
+
+                pickableObject.Pick(); 
+                _playerView.PickUp(); 
                 StartCoroutine(WaitToPickUp());
-                _inventory = InventoryController.Instance.SetInventory(_inventory);
+
                 break;
             }
         }

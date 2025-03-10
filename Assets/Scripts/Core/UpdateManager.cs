@@ -88,6 +88,7 @@ public class UpdateManager : MonoBehaviour
     {
         IsPaused = true;
         DOTween.PauseAll();
+        DOTween.Play("UI");
         CacheRigidbodiesVelocities();
         SetRigidbodiesKinematic(true);
         OnPause?.Invoke();

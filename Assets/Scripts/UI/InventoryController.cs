@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -21,6 +22,7 @@ public class InventoryController : MonoBehaviour
     [SerializeField]
     private Transform slotsContainer;
     private List<SlotIcon> slots;
+    private bool _isOpen;
     
     private SlotIcon _selectedSlot;
     
@@ -35,18 +37,27 @@ public class InventoryController : MonoBehaviour
 
     private void Start()
     {
-        FillEmptySlots();
+        _inventory = new Inventory(MAX_SLOTS, 0); 
         _view = GetComponent<InventoryView>();
+        FillEmptySlots();
+    }
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.E) && _isOpen)
+            Close();
     }
 
     public void Open()
     {
         _view.OpenInventory(UpdateManager.TogglePause);
+        _isOpen = true;
         Cursor.lockState = CursorLockMode.None;
     }
     public void Close()
     {
         _view.CloseInventory(UpdateManager.TogglePause);
+        _isOpen = false;
         Cursor.lockState = CursorLockMode.Locked;
         
     }
@@ -58,14 +69,13 @@ public class InventoryController : MonoBehaviour
         {
             var obj = Instantiate(slotPrefab, slotsContainer);
             var slot = obj.GetComponentInChildren<SlotIcon>();
-            slot.SetInventoryView(this);
+            slot.SetItem(_inventory.items[i]);
+            slot.SetInventoryController(this);
             slot.SetIndex(i);
             slot.EmptySlot();
-            slot.SetItem(null);
             slots.Add(slot);
         }
     }
-
 
     public void SelectItem(SlotIcon slot)
     {
@@ -75,6 +85,17 @@ public class InventoryController : MonoBehaviour
         _view.AnimationDescription(()=>_itemDescription.SetItem(_selectedSlot.item));
         
     }
+
+    public void AddItemToInventory(Item item)
+    {
+        if (_inventory == null)
+            return;
+
+        _inventory.AddItem(item);
+        UpdateInventory();
+    }
+    public Inventory GetInventory() => _inventory;
+ 
     public Inventory SetInventory(Inventory newInventory)
     {
         _inventory = newInventory;
@@ -86,11 +107,11 @@ public class InventoryController : MonoBehaviour
     {
         if (_inventory == null || slots == null) return;
 
-        foreach (var slot in slots)
+        foreach (var slot in slots.Where(x=> x == null))
             slot.EmptySlot();
 
         for (int i = 0; i < _inventory.items.Count; i++)
-            if (i < MAX_SLOTS)
+            if (_inventory.items[i] != null && i < MAX_SLOTS)
                 slots[i].SetItem(_inventory.items[i]);
     }
 

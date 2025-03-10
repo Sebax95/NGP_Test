@@ -20,11 +20,12 @@ public class InventoryView: MonoBehaviour
     public void AnimationDescription(Action onComplete) => _itemDescription.transform
         .DOMoveX(_startPositionDescription.x + 550, .2f)
         .SetEase(Ease.InOutSine)
+        .SetId("UI")
         .OnComplete(() => onComplete?.Invoke());
     
     public void OpenInventory(Action onComplete)
     {
-        inventoryContainer.DOMoveX(_startPositionInventory.x + 2365,.2f).SetEase(Ease.InOutSine).OnComplete(() =>
+        inventoryContainer.DOMoveX(_startPositionInventory.x + 2365, .2f).SetEase(Ease.InOutSine).SetId("UI").OnComplete(() =>
         {
             _startPositionDescription = _itemDescription.transform.position;
             onComplete?.Invoke();
@@ -32,7 +33,7 @@ public class InventoryView: MonoBehaviour
     }
     public void CloseInventory(Action onComplete)
     {
-        inventoryContainer.DOMoveX(_startPositionInventory.x, .2f).SetEase(Ease.InOutSine).OnComplete(() =>
+        inventoryContainer.DOMoveX(_startPositionInventory.x, .2f).SetEase(Ease.InOutSine).SetId("UI").OnComplete(() =>
         {
             _itemDescription.transform.position = new Vector3(_startPositionDescription.x - 2365, _startPositionDescription.y, _startPositionDescription.z); 
             onComplete?.Invoke();
