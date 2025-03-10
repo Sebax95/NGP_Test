@@ -42,16 +42,38 @@ public class ItemToolEditor : EditorWindow
         newItem.prefab = selectedPrefab;
         newItem.quantity = 1;
 
-        string resourcesPath = "Assets/Resources";
-        if (!AssetDatabase.IsValidFolder(resourcesPath))
-            AssetDatabase.CreateFolder("Assets", "Resources/Item Data");
+        string resourcesPath = "Assets/Resources/Item Data";
+        if (!System.IO.Directory.Exists(resourcesPath))
+            AssetDatabase.CreateFolder("Assets/Resources", "Item Data");
 
-        string filePath = $"{resourcesPath}/Item Data/{itemName}.asset";
+        string filePath = $"{resourcesPath}/{itemName}.asset";
         AssetDatabase.CreateAsset(newItem, filePath);
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
 
         Debug.Log($"Item ScriptableObject created at {filePath}.");
+
+        ItemDatabase database = Resources.Load<ItemDatabase>("Database");
+
+        if (database == null)
+        {
+            Debug.LogError(
+                "ItemDatabase not found in Resources. Make sure it's created and located in Resources folder.");
+            return;
+        }
+        if (database.allItems.Exists(item => item.id == itemID))
+        {
+            Debug.LogWarning($"Item with ID {itemID} already exists in the database. Please use a unique ID.");
+            return;
+        }
+
+        database.allItems.Add(newItem);
+        
+        EditorUtility.SetDirty(database);
+        AssetDatabase.SaveAssets();
+        AssetDatabase.Refresh();
+
+        Debug.Log($"Item '{itemName}' was added to ItemDatabase.");
     }
     
 }

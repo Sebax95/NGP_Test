@@ -44,13 +44,17 @@ public class UpdateManager : MonoBehaviour
         else
             Instance.Pause();
     }
+    public static void SetPause(bool pause)
+    {
+        if (pause && !Instance.IsPaused)
+            Instance.Pause();
+        else if (!pause && Instance.IsPaused)
+            Instance.Resume();
+    }
 
     private void Update()
     {
         Profiler.BeginSample("Update Manager Update");
-#if UNITY_EDITOR
-        CheckPauseShortcut();
-#endif
         ProcessUpdates(subscriber => subscriber.OnUpdate());
         Profiler.EndSample();
     }
@@ -75,14 +79,6 @@ public class UpdateManager : MonoBehaviour
         foreach (var subscriber in _updateSubscribers.Where(subscriber => !subscriber.IsIndividuallyPaused))
             updateAction(subscriber);
     }
-
-#if UNITY_EDITOR
-    private void CheckPauseShortcut()
-    {
-        if (Input.GetKeyDown(KeyCode.P))
-            TogglePause();
-    }
-#endif
 
     private void Pause()
     {

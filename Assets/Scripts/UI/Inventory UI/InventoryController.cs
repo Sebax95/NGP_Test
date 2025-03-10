@@ -28,6 +28,7 @@ public class InventoryController : MonoBehaviour
     
     private Inventory _inventory;
     private Player _player;
+    private ItemDatabase _itemDatabase;
     private void Awake()
     {
         if(Instance == null)
@@ -38,6 +39,9 @@ public class InventoryController : MonoBehaviour
 
     private void Start()
     {
+        _itemDatabase = Resources.Load<ItemDatabase>("Database");
+        if (_itemDatabase == null)
+            Debug.LogWarning("ItemDatabase not found");
         _inventory = new Inventory(MAX_SLOTS, 0); 
         _view = GetComponent<InventoryView>();
         FillEmptySlots();
@@ -72,18 +76,24 @@ public class InventoryController : MonoBehaviour
 
     public void CloseDescription() => _view.AnimationDescriptionClose(() => _itemDescription.SetItem(_selectedSlot.item));
 
+    public Sprite GetSpriteByID(int id)
+    {
+        if (_itemDatabase == null)
+            return null;
+        return _itemDatabase.GetItemSOById(id).sprite;
+    }
+    
     public void Open()
     {
-        _view.OpenInventory(UpdateManager.TogglePause);
+        _view.OpenInventory(() => UpdateManager.SetPause(true));
         _isOpen = true;
         Cursor.lockState = CursorLockMode.None;
     }
     public void Close()
     {
-        _view.CloseInventory(UpdateManager.TogglePause);
+        _view.CloseInventory(() => UpdateManager.SetPause(false));
         _isOpen = false;
         Cursor.lockState = CursorLockMode.Locked;
-        
     }
 
     private void FillEmptySlots()
@@ -128,11 +138,10 @@ public class InventoryController : MonoBehaviour
     }
     public Inventory GetInventory() => _inventory;
  
-    public Inventory SetInventory(Inventory newInventory)
+    public void SetInventory(Inventory newInventory)
     {
         _inventory = newInventory;
         UpdateInventory();
-        return _inventory;
     }
     
     private void UpdateInventory()

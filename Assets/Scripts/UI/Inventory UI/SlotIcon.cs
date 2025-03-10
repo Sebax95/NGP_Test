@@ -53,7 +53,7 @@ public class SlotIcon : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, 
     {
         if (item.type != ItemType.Empty)
         {
-            imageIcon.sprite = item.sprite;
+            imageIcon.sprite = _inventoryController.GetSpriteByID(item.id);
             imageIcon.color = Color.white;
         }
         else

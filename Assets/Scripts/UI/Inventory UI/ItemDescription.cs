@@ -23,7 +23,7 @@ public class ItemDescription: MonoBehaviour
     
     private void SetSprite()
     {
-        imageSprite.sprite = item.sprite;
+        imageSprite.sprite = InventoryController.Instance.GetSpriteByID(item.id);
         imageSprite.color = Color.white;
     }
     private void SetText() => textName.text = item.name;

@@ -9,7 +9,6 @@ public class Item
     public string description;
     public int quantity;
     public ItemType type;
-    public Sprite sprite;
 
     public Item(int id, string name, string description, int quantity, ItemType type, Sprite sprite)
     {
@@ -18,7 +17,6 @@ public class Item
         this.description = description;
         this.quantity = quantity;
         this.type = type;
-        this.sprite = sprite;
     }
 
     public Item(Item item)
@@ -28,13 +26,11 @@ public class Item
         description = item.description;
         quantity = item.quantity;
         type = item.type;
-        sprite = item.sprite;
     }
 
     public Item()
     {
         type = ItemType.Empty;
-        sprite = null;
         name = "";
         description = "";
         quantity = 0;
