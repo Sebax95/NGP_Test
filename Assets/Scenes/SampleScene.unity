@@ -144,7 +144,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &18727984 stripped
 Transform:
@@ -628,7 +628,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &73665452 stripped
 Transform:
@@ -656,7 +656,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &120701007 stripped
 Transform:
@@ -760,7 +760,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &144766971 stripped
 Transform:
@@ -788,7 +788,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &151166243 stripped
 Transform:
@@ -884,7 +884,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 106.85
+  m_fontSize: 97.7
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -955,7 +955,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &161540519 stripped
 Transform:
@@ -1226,8 +1226,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.31066668}
   m_AnchorMax: {x: 0.5, y: 0.31066668}
-  m_AnchoredPosition: {x: -0.002412796, y: -1.2595825}
-  m_SizeDelta: {x: 2329.4, y: 1974.4875}
+  m_AnchoredPosition: {x: -0.002412796, y: 35.709534}
+  m_SizeDelta: {x: 2329.4, y: 1603.9907}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &246610869
 MonoBehaviour:
@@ -1343,6 +1343,70 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 602974213}
   m_SourcePrefab: {fileID: 100100000, guid: d0ddd93953187fd4195f9cea4a7b8a56, type: 3}
+--- !u!1 &253212542
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 253212543}
+  - component: {fileID: 253212544}
+  m_Layer: 5
+  m_Name: Buttons
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &253212543
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253212542}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1913848800}
+  - {fileID: 1774419650}
+  m_Father: {fileID: 257880655}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -0.0002746582, y: 59.32071}
+  m_SizeDelta: {x: -88.972, y: 97.9331}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &253212544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253212542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 20
+    m_Bottom: 20
+  m_ChildAlignment: 0
+  m_Spacing: 20
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1 &257880654
 GameObject:
   m_ObjectHideFlags: 0
@@ -1361,7 +1425,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &257880655
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1374,9 +1438,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1454227145}
   - {fileID: 380169292}
   - {fileID: 774660408}
   - {fileID: 246610868}
+  - {fileID: 253212543}
   m_Father: {fileID: 1902864751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
@@ -1444,6 +1510,8 @@ MonoBehaviour:
   imageSprite: {fileID: 2134742314}
   textName: {fileID: 774660409}
   textDescription: {fileID: 158077459}
+  useButton: {fileID: 1913848803}
+  dropButton: {fileID: 1774419647}
 --- !u!1001 &312425663
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1541,7 +1609,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &313938124 stripped
 Transform:
@@ -1569,7 +1637,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &315969725 stripped
 Transform:
@@ -1597,7 +1665,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &329707344 stripped
 Transform:
@@ -1853,7 +1921,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &377665445 stripped
 Transform:
@@ -2185,7 +2253,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &416575436 stripped
 Transform:
@@ -2441,7 +2509,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &456573804 stripped
 Transform:
@@ -2469,7 +2537,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &473347201 stripped
 Transform:
@@ -2497,7 +2565,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &483739403 stripped
 Transform:
@@ -2525,7 +2593,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &498294015 stripped
 Transform:
@@ -2716,7 +2784,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &555086708 stripped
 Transform:
@@ -2744,7 +2812,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &556494697 stripped
 Transform:
@@ -2848,7 +2916,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &571724533 stripped
 Transform:
@@ -2876,7 +2944,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &573144898 stripped
 Transform:
@@ -2904,7 +2972,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &584452535 stripped
 Transform:
@@ -2932,7 +3000,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &602974217 stripped
 Transform:
@@ -3036,7 +3104,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &629527971 stripped
 Transform:
@@ -3216,7 +3284,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &648196833 stripped
 Transform:
@@ -3378,7 +3446,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &656508936 stripped
 Transform:
@@ -3482,7 +3550,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &680678893 stripped
 Transform:
@@ -3510,7 +3578,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &688617132 stripped
 Transform:
@@ -3860,7 +3928,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &770584301 stripped
 Transform:
@@ -4022,7 +4090,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &803854315 stripped
 Transform:
@@ -4201,7 +4269,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &829053979 stripped
 Transform:
@@ -4481,7 +4549,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &888255649 stripped
 Transform:
@@ -4619,8 +4687,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.022622224, y: -0.07922405, z: 0.0017983412, w: 0.9965985}
-  m_LocalPosition: {x: 1.7, y: 1.545, z: -2.72}
+  m_LocalRotation: {x: -0.1321273, y: -0.07854532, z: -0.010503392, w: 0.98806006}
+  m_LocalPosition: {x: 1.7, y: 0.545, z: -2.72}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4681,7 +4749,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &987110297 stripped
 Transform:
@@ -4709,7 +4777,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &990012401 stripped
 Transform:
@@ -4737,7 +4805,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &1003891872 stripped
 Transform:
@@ -4896,6 +4964,140 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 803854311}
   m_SourcePrefab: {fileID: 100100000, guid: d0ddd93953187fd4195f9cea4a7b8a56, type: 3}
+--- !u!1 &1030151555
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1030151556}
+  - component: {fileID: 1030151558}
+  - component: {fileID: 1030151557}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1030151556
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030151555}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1913848800}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1030151557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030151555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Use
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 30.46
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 18
+  m_fontSizeMax: 30.46
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1030151558
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030151555}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1080788837
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5373,7 +5575,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &1296369789 stripped
 Transform:
@@ -5401,7 +5603,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &1299287631 stripped
 Transform:
@@ -5434,7 +5636,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &1342558926 stripped
 Transform:
@@ -5462,7 +5664,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &1385498920 stripped
 Transform:
@@ -5566,7 +5768,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &1401105872 stripped
 Transform:
@@ -5670,7 +5872,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &1430651656 stripped
 Transform:
@@ -5829,6 +6031,139 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 498294011}
   m_SourcePrefab: {fileID: 100100000, guid: d0ddd93953187fd4195f9cea4a7b8a56, type: 3}
+--- !u!1 &1454227144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1454227145}
+  - component: {fileID: 1454227148}
+  - component: {fileID: 1454227147}
+  - component: {fileID: 1454227146}
+  m_Layer: 5
+  m_Name: CloseButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1454227145
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454227144}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2075915164}
+  m_Father: {fileID: 257880655}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 233.8, y: -41.9}
+  m_SizeDelta: {x: 62.7779, y: 62.7779}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1454227146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454227144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1454227147}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 235303464}
+        m_TargetAssemblyTypeName: InventoryController, Assembly-CSharp
+        m_MethodName: CloseDescription
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1454227147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454227144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 4b3d2095baccc2041b973b66b786b9d0, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1454227148
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454227144}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1458185050
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5926,7 +6261,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &1497328185 stripped
 Transform:
@@ -5954,7 +6289,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &1503398056 stripped
 Transform:
@@ -5982,7 +6317,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &1536014636 stripped
 Transform:
@@ -6010,7 +6345,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &1576301147 stripped
 Transform:
@@ -6190,7 +6525,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &1603028152 stripped
 Transform:
@@ -6321,7 +6656,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &1686476766 stripped
 Transform:
@@ -6364,7 +6699,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 424.1289, y: -46.67108}
+  m_AnchoredPosition: {x: 421.7, y: -49.1}
   m_SizeDelta: {x: 62.7779, y: 62.7779}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1714841680
@@ -6558,7 +6893,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &1743996506 stripped
 Transform:
@@ -6663,7 +6998,7 @@ MonoBehaviour:
   description: A nice tomato, perfect for a pizza (i didnt have a tomato sprite so,
     there is an red apple)
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: da7129ed6a246f048a49d8d97de2d2d4, type: 3}
 --- !u!1 &1756651020 stripped
 GameObject:
@@ -6686,7 +7021,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &1756651025 stripped
 Transform:
@@ -6790,7 +7125,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &1767382988 stripped
 Transform:
@@ -6873,6 +7208,127 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1576301143}
   m_SourcePrefab: {fileID: 100100000, guid: d0ddd93953187fd4195f9cea4a7b8a56, type: 3}
+--- !u!1 &1774419646
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1774419650}
+  - component: {fileID: 1774419649}
+  - component: {fileID: 1774419648}
+  - component: {fileID: 1774419647}
+  m_Layer: 5
+  m_Name: Drop Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1774419647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774419646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1774419648}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1774419648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774419646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: c9006339b2156b142934eac2999ef67c, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1774419649
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774419646}
+  m_CullTransparentMesh: 1
+--- !u!224 &1774419650
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774419646}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2102599341}
+  m_Father: {fileID: 253212543}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1778306825 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 388876489497171537, guid: d0ddd93953187fd4195f9cea4a7b8a56, type: 3}
@@ -6894,7 +7350,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &1778306830 stripped
 Transform:
@@ -6998,7 +7454,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &1847251593 stripped
 Transform:
@@ -7247,13 +7703,134 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &1909425937 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1021826422970944747, guid: d0ddd93953187fd4195f9cea4a7b8a56, type: 3}
   m_PrefabInstance: {fileID: 558284732}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1913848799
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1913848800}
+  - component: {fileID: 1913848802}
+  - component: {fileID: 1913848801}
+  - component: {fileID: 1913848803}
+  m_Layer: 5
+  m_Name: Use Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1913848800
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913848799}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1030151556}
+  m_Father: {fileID: 253212543}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1913848801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913848799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: c9006339b2156b142934eac2999ef67c, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1913848802
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913848799}
+  m_CullTransparentMesh: 1
+--- !u!114 &1913848803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913848799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1913848801}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1942625872
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7484,7 +8061,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &2070677636 stripped
 Transform:
@@ -7512,13 +8089,147 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &2075645051 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1021826422970944747, guid: d0ddd93953187fd4195f9cea4a7b8a56, type: 3}
   m_PrefabInstance: {fileID: 1942625872}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2075915163
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2075915164}
+  - component: {fileID: 2075915166}
+  - component: {fileID: 2075915165}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2075915164
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075915163}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1454227145}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2075915165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075915163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: X
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 34.3
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 18
+  m_fontSizeMax: 34.3
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 3.7432861, y: 3.7434082, z: 3.6497803, w: 3.836853}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &2075915166
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075915163}
+  m_CullTransparentMesh: 1
 --- !u!1 &2077178202 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 388876489497171537, guid: d0ddd93953187fd4195f9cea4a7b8a56, type: 3}
@@ -7540,7 +8251,7 @@ MonoBehaviour:
   name: Apple
   description: A delicious apple
   quantity: 1
-  type: 1
+  type: 2
   sprite: {fileID: 21300000, guid: c1d0e6764d9c5f8458571840fb1d57d3, type: 3}
 --- !u!4 &2077178207 stripped
 Transform:
@@ -7691,6 +8402,140 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2102599340
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2102599341}
+  - component: {fileID: 2102599343}
+  - component: {fileID: 2102599342}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2102599341
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102599340}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1774419650}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2102599342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102599340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Drop
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 30.46
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 18
+  m_fontSizeMax: 30.46
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &2102599343
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102599340}
+  m_CullTransparentMesh: 1
 --- !u!1 &2134742311
 GameObject:
   m_ObjectHideFlags: 0
@@ -7863,21 +8708,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 350949361942070379, guid: 90b7f0b5724390040aae9a95596bb0da, type: 3}
-      propertyPath: m_FollowOffset.y
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 350949361942070379, guid: 90b7f0b5724390040aae9a95596bb0da, type: 3}
-      propertyPath: m_FollowOffset.z
-      value: -5
-      objectReference: {fileID: 0}
     - target: {fileID: 1549006441023908079, guid: 90b7f0b5724390040aae9a95596bb0da, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 1549006441023908079, guid: 90b7f0b5724390040aae9a95596bb0da, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.545
+      value: 0.545
       objectReference: {fileID: 0}
     - target: {fileID: 1549006441023908079, guid: 90b7f0b5724390040aae9a95596bb0da, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7912,76 +8749,28 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3992540027502474255, guid: 90b7f0b5724390040aae9a95596bb0da, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3992540027502474255, guid: 90b7f0b5724390040aae9a95596bb0da, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.99312663
-      objectReference: {fileID: 0}
-    - target: {fileID: 3992540027502474255, guid: 90b7f0b5724390040aae9a95596bb0da, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.08613817
+      value: -0.1321273
       objectReference: {fileID: 0}
     - target: {fileID: 3992540027502474255, guid: 90b7f0b5724390040aae9a95596bb0da, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.07894806
+      value: -0.078545295
       objectReference: {fileID: 0}
     - target: {fileID: 3992540027502474255, guid: 90b7f0b5724390040aae9a95596bb0da, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0068475064
-      objectReference: {fileID: 0}
-    - target: {fileID: 4193525382976646362, guid: 90b7f0b5724390040aae9a95596bb0da, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4193525382976646362, guid: 90b7f0b5724390040aae9a95596bb0da, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4193525382976646362, guid: 90b7f0b5724390040aae9a95596bb0da, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9965985
-      objectReference: {fileID: 0}
-    - target: {fileID: 4193525382976646362, guid: 90b7f0b5724390040aae9a95596bb0da, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.022622224
-      objectReference: {fileID: 0}
-    - target: {fileID: 4193525382976646362, guid: 90b7f0b5724390040aae9a95596bb0da, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.07922405
-      objectReference: {fileID: 0}
-    - target: {fileID: 4193525382976646362, guid: 90b7f0b5724390040aae9a95596bb0da, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.001798341
-      objectReference: {fileID: 0}
-    - target: {fileID: 5469449398864799952, guid: 90b7f0b5724390040aae9a95596bb0da, type: 3}
-      propertyPath: m_FollowOffset.y
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5469449398864799952, guid: 90b7f0b5724390040aae9a95596bb0da, type: 3}
-      propertyPath: m_FollowOffset.z
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6036827348753899890, guid: 90b7f0b5724390040aae9a95596bb0da, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6036827348753899890, guid: 90b7f0b5724390040aae9a95596bb0da, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9965985
+      value: -0.010503387
       objectReference: {fileID: 0}
     - target: {fileID: 6036827348753899890, guid: 90b7f0b5724390040aae9a95596bb0da, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.022622224
+      value: -0.07514623
       objectReference: {fileID: 0}
     - target: {fileID: 6036827348753899890, guid: 90b7f0b5724390040aae9a95596bb0da, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.07922405
+      value: -0.079018995
       objectReference: {fileID: 0}
     - target: {fileID: 6036827348753899890, guid: 90b7f0b5724390040aae9a95596bb0da, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.001798341
+      value: -0.0059737093
       objectReference: {fileID: 0}
     - target: {fileID: 6072851826631017151, guid: 90b7f0b5724390040aae9a95596bb0da, type: 3}
       propertyPath: m_Follow
@@ -7991,14 +8780,6 @@ PrefabInstance:
       propertyPath: m_LookAt
       value: 
       objectReference: {fileID: 1329154874}
-    - target: {fileID: 6084918616133292884, guid: 90b7f0b5724390040aae9a95596bb0da, type: 3}
-      propertyPath: m_FollowOffset.y
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6084918616133292884, guid: 90b7f0b5724390040aae9a95596bb0da, type: 3}
-      propertyPath: m_FollowOffset.z
-      value: -5
-      objectReference: {fileID: 0}
     - target: {fileID: 7543972353862178526, guid: 90b7f0b5724390040aae9a95596bb0da, type: 3}
       propertyPath: m_Name
       value: Cinemachine Camera
@@ -8080,7 +8861,7 @@ SceneRoots:
   - {fileID: 3867100709733695866}
   - {fileID: 1848801465}
   - {fileID: 2034297600}
-  - {fileID: 228910458}
   - {fileID: 1678036759}
   - {fileID: 2092645188}
+  - {fileID: 228910458}
   - {fileID: 1751014812}

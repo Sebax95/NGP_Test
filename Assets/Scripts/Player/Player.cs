@@ -96,19 +96,40 @@ public class Player: BaseMonoBehaviour
             {
                 _isPicking = true;
                 canMove = false;
-
                 pickableObject.Pick(); 
                 _playerView.PickUp(); 
-                StartCoroutine(WaitToPickUp());
-
+                StartCoroutine(WaitToMove());
                 break;
             }
         }
     }
 
+    public void UseItem(Item item)
+    {
+        switch (item.type)
+        {
+            case ItemType.Weapon:
+                break;
+            case ItemType.Consumable:
+                ConsumeItem();
+                InventoryController.Instance.RemoveItemFromInventory(item);
+                break;
+            case ItemType.Quest:
+                break;
+        }
+    }
+
+    private void ConsumeItem()
+    {
+        canMove = false;
+        _playerView.Eat();
+        StartCoroutine(WaitToMove());
+        //do more things like health the player or boost it
+    }
+
     public void OpenInventory() => InventoryController.Instance.Open();
 
-    private IEnumerator WaitToPickUp()
+    private IEnumerator WaitToMove()
     {
         yield return new WaitForSeconds(1.7f);
         _isPicking = false;

@@ -27,6 +27,7 @@ public class InventoryController : MonoBehaviour
     private SlotIcon _selectedSlot;
     
     private Inventory _inventory;
+    private Player _player;
     private void Awake()
     {
         if(Instance == null)
@@ -40,6 +41,27 @@ public class InventoryController : MonoBehaviour
         _inventory = new Inventory(MAX_SLOTS, 0); 
         _view = GetComponent<InventoryView>();
         FillEmptySlots();
+        _player = FindObjectOfType<Player>();
+        _itemDescription.useButton.onClick.AddListener(() =>
+        {
+            Close();
+            _player.UseItem(_selectedSlot.item);
+        });
+        _itemDescription.dropButton.onClick.AddListener(() =>
+        {
+            CloseDescription();
+            RemoveItemFromInventory(_selectedSlot.item);
+        });
+    }
+
+    private void OnDisable()
+    {
+        _itemDescription.useButton.onClick.RemoveAllListeners();
+    }
+
+    private void OnDestroy()
+    {
+        _itemDescription.useButton.onClick.RemoveAllListeners();
     }
 
     private void Update()
@@ -47,6 +69,8 @@ public class InventoryController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.E) && _isOpen)
             Close();
     }
+
+    public void CloseDescription() => _view.AnimationDescriptionClose(() => _itemDescription.SetItem(_selectedSlot.item));
 
     public void Open()
     {
@@ -82,7 +106,7 @@ public class InventoryController : MonoBehaviour
         _selectedSlot = slot;
         if(!_itemDescription.gameObject.activeSelf)
             _itemDescription.gameObject.SetActive(true);
-        _view.AnimationDescription(()=>_itemDescription.SetItem(_selectedSlot.item));
+        _view.AnimationDescriptionOpen(()=>_itemDescription.SetItem(_selectedSlot.item));
         
     }
 
@@ -92,6 +116,14 @@ public class InventoryController : MonoBehaviour
             return;
 
         _inventory.AddItem(item);
+        UpdateInventory();
+    }
+
+    public void RemoveItemFromInventory(Item item)
+    {
+        if (_inventory == null)
+            return;
+        _inventory.RemoveItem(item.id, 1);
         UpdateInventory();
     }
     public Inventory GetInventory() => _inventory;

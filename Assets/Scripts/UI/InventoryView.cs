@@ -17,8 +17,13 @@ public class InventoryView: MonoBehaviour
         _startPositionInventory = inventoryContainer.position;
     }
 
-    public void AnimationDescription(Action onComplete) => _itemDescription.transform
+    public void AnimationDescriptionOpen(Action onComplete) => _itemDescription.transform
         .DOMoveX(_startPositionDescription.x + 550, .2f)
+        .SetEase(Ease.InOutSine)
+        .SetId("UI")
+        .OnComplete(() => onComplete?.Invoke());
+    public void AnimationDescriptionClose(Action onComplete) => _itemDescription.transform
+        .DOMoveX(_startPositionDescription.x, .2f)
         .SetEase(Ease.InOutSine)
         .SetId("UI")
         .OnComplete(() => onComplete?.Invoke());

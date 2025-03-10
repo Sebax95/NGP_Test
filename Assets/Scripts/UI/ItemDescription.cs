@@ -10,6 +10,8 @@ public class ItemDescription: MonoBehaviour
     public Image imageSprite;
     public TextMeshProUGUI textName;
     public TextMeshProUGUI textDescription;
+    public Button useButton;
+    public Button dropButton;
 
     private void Start() => EmptySlot();
 

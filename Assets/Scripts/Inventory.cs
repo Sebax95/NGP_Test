@@ -39,23 +39,27 @@ public class Inventory
             }
         }
     }
-    
+
     public void RemoveItem(int itemId, int quantityToRemove)
     {
-        if (quantityToRemove <= 0)
+        if (quantityToRemove <= 0) 
             return;
-        
-        Item existingItem = items.Find(i => i.id == itemId);
+
+        Item existingItem = items.Find(i => i != null && i.id == itemId);
         if (existingItem != null)
         {
             existingItem.quantity -= quantityToRemove;
-            
+
             if (existingItem.quantity <= 0)
             {
                 existingItem.quantity = 0;
                 
-                items.Remove(existingItem);
-                currentSize--;
+                int itemIndex = items.IndexOf(existingItem);
+                if (itemIndex != -1)
+                {
+                    items[itemIndex] = new Item();
+                    currentSize--;
+                }
             }
         }
     }
