@@ -15,7 +15,7 @@ public class Menu : MonoBehaviour
     
     private InventorySave _inventorySave;
     private MenuView _menuView;
-    private bool _isOpen;
+    public static bool isMenuOpened;
     [SerializeField] 
     private GameObject _menuButtons;
     [SerializeField] 
@@ -24,15 +24,15 @@ public class Menu : MonoBehaviour
     {
         _inventorySave = new InventorySave();
         _menuView = GetComponent<MenuView>();
-        _isOpen = false;
-        Close();
+        isMenuOpened = false;
+        
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (_isOpen)
+            if (isMenuOpened)
                 Close();
             else
                 Open();
@@ -41,20 +41,20 @@ public class Menu : MonoBehaviour
 
     private void Open()
     {
+        InventoryController.Instance.Close();
         _menuButtons.SetActive(true);
         _menuBackground.SetActive(true);
-        _menuView.MoveButtonsIn();
+        _menuView.MoveButtonsIn(()=>UpdateManager.SetPause(true));
         _menuView.FadeBackgroundIn();
-        _isOpen = true;
+        isMenuOpened = true;
         Cursor.lockState = CursorLockMode.None;
-        UpdateManager.SetPause(true);
     }
 
     private void Close()
     {
         _menuView.MoveButtonsOut(()=> _menuButtons.SetActive(false));
         _menuView.FadeBackgroundOut(()=> _menuBackground.SetActive(false));
-        _isOpen = false;
+        isMenuOpened = false;
         Cursor.lockState = CursorLockMode.Locked;
         UpdateManager.SetPause(false);
     }

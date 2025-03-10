@@ -17,6 +17,6 @@
             UnityEngine.Debug.Log("Inventory loaded");
         }
         else
-            UnityEngine.Debug.LogWarning("No Inventory found");
+            UnityEngine.Debug.LogError("No Inventory found");
     }
 }

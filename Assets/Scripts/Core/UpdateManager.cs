@@ -46,9 +46,11 @@ public class UpdateManager : MonoBehaviour
     }
     public static void SetPause(bool pause)
     {
-        if (pause && !Instance.IsPaused)
+        if((Instance.IsPaused && pause) || (!Instance.IsPaused == !pause))
+            return;
+        if (pause)
             Instance.Pause();
-        else if (!pause && Instance.IsPaused)
+        else
             Instance.Resume();
     }
 

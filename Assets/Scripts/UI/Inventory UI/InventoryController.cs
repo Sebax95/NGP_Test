@@ -22,7 +22,7 @@ public class InventoryController : MonoBehaviour
     [SerializeField]
     private Transform slotsContainer;
     private List<SlotIcon> slots;
-    private bool _isOpen;
+    [FormerlySerializedAs("_isOpen")] public bool isOpen;
     
     private SlotIcon _selectedSlot;
     
@@ -70,7 +70,7 @@ public class InventoryController : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E) && _isOpen)
+        if(Input.GetKeyDown(KeyCode.E) && isOpen || Menu.isMenuOpened)
             Close();
     }
 
@@ -86,13 +86,19 @@ public class InventoryController : MonoBehaviour
     public void Open()
     {
         _view.OpenInventory(() => UpdateManager.SetPause(true));
-        _isOpen = true;
+        isOpen = true;
         Cursor.lockState = CursorLockMode.None;
     }
     public void Close()
     {
-        _view.CloseInventory(() => UpdateManager.SetPause(false));
-        _isOpen = false;
+        if(!isOpen)
+            return;
+        _view.CloseInventory(() =>
+        {
+            if (!Menu.isMenuOpened)
+                UpdateManager.SetPause(false);
+        });
+        isOpen = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
 
